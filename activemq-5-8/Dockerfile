@@ -8,7 +8,8 @@ RUN apt-get update
 RUN apt-get -y install python-software-properties
 
 RUN apt-get -y install curl
-RUN curl -L http://www.carfab.com/apachesoftware/activemq/apache-activemq/5.8.0/apache-activemq-5.8.0-bin.tar.gz | tar -xzv
+RUN cd /opt; curl -L http://www.carfab.com/apachesoftware/activemq/apache-activemq/5.8.0/apache-activemq-5.8.0-bin.tar.gz | tar -xzv
+RUN ln -sf /opt/apache-activemq-5.8.0 /opt/activemq
 RUN ln -sf /opt/activemq/bin/activemq /etc/init.d/
-# RUN update-rc.d activemq defaults
+RUN update-rc.d activemq defaults
 # RUN /etc/init.d/activemq setup /etc/default/activemq
