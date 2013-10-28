@@ -1,4 +1,4 @@
-ROM bdecamp/oracle-java-7
+FROM bdecamp/oracle-java-7
 
 MAINTAINER Brian DeCamp < bdecamp [at] blackstonebay {dot} com>
 # make sure the package repository is up to date
