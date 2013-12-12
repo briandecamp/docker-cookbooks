@@ -12,4 +12,4 @@ RUN cd /opt; curl -L http://www.carfab.com/apachesoftware/activemq/apache-active
 RUN ln -sf /opt/apache-activemq-5.8.0 /opt/activemq
 RUN ln -sf /opt/activemq/bin/activemq /etc/init.d/
 RUN update-rc.d activemq defaults
-# RUN /etc/init.d/activemq setup /etc/default/activemq
+RUN /etc/init.d/activemq setup /etc/default/activemq
